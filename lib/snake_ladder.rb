@@ -85,17 +85,17 @@ class SnakeLadder  #instence creation time set value for player dice snakes ladd
 end
 
 
-puts "Enter players namw in array"
+puts "Enter players names"
 players = gets.chomp
 p players = players.split(' ').reject{|u| u=="nil" || u=="''"|| u== "\"\""|| u== "\\n"} 
-puts "Enter dice value "
+puts "Enter dice value"
 dice = gets.chomp.to_i
 
 
-puts "Enter Snake value "
+puts "Enter Snake value"
 snakes = gets.chomp.to_i
 
-puts "Enter ladder value "
+puts "Enter ladder value"
 ladders = gets.chomp.to_i
 
 puts "Enter board Size by default it will be 100"
