@@ -1,7 +1,7 @@
 
 #### Solution 1
 [Snake Ladder Game](https://github.com/vgvinay2/Assignment/blob/master/lib/snake_ladder.rb)
- To run this game download and bunle (to run Rspec)
+ To run this game download and bundle (to run Rspec)
  To run snake game 
  ```console
  ruby lib/snake_ladder.rb
