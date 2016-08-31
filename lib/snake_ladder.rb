@@ -101,5 +101,9 @@ ladders = gets.chomp.to_i
 puts "Enter board Size by default it will be 100"
 board = gets.chomp.to_i
 # players,dice,snakes, ladders, board_size=100)
+if players.size > 0 && dice > 0  && snakes > 0 && ladders > 0 
 easy_game = SnakeLadder.new(players,dice,snakes,ladders,board=100)
 easy_game.play
+else 
+    p "Enter values of Dice #{dice}  Snakes #{snakes} && Ladders #{ladders} cant blank!! It should be greater than 0"
+end 
