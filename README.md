@@ -4,7 +4,9 @@
  To run this game download and bundle (to run Rspec)
  To run snake game 
  ```console
-
+ cd Assignment 
+ ruby lib/snake_ladder.rb
+ 
  It will ask Enter players name 
   Vinay Rajesh Jhon
  Enter dice value
