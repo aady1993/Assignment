@@ -34,8 +34,17 @@ class SnakeLadder  #instence creation time set value for player dice snakes ladd
 
 # key method if problem how player will move and get value to move to know how its working check move method and uncommentfallowing line
    def move(players, player_turn)
-     new_position = players[player_turn] + throw_dice(@dice)
-     new_position = @snakes_ladders[new_position] if @snakes_ladders.has_key?(new_position)
+    puts "#{players} .. #{@players[player_turn]} your current position is #{players[player_turn]} its your turn to play so through a dice by press Enter"
+    mthrough_dice = gets.chomp.to_i 
+    my_val = throw_dice(@dice)
+    puts "#{@players[player_turn]} you got this number #{my_val}"
+    new_position = players[player_turn] + my_val
+    if @snakes_ladders.has_key?(new_position)
+     puts " you got #{ (my_val - @snakes_ladders[new_position]) < 0 ?  'ladder' : 'snake' }.... so your new position #{@snakes_ladders[new_position]} "
+     new_position = @snakes_ladders[new_position] 
+    else 
+      puts "your new position #{new_position} "
+    end 
      return player_turn if new_position >= @board_size 
      players[player_turn] = new_position
      next_player = (player_turn + 1) % players.length
